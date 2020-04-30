@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import Home from './components/Home'
+import Random from './components/Random'
+import NavBar from './components/NavBar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {}
+
+  render() {
+    return (
+      <div className="App">
+        <header>
+           <NavBar />
+        </header>
+        <h1>Find My Beer</h1>
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          {/* <Route exact path="/beers" component={AllBeers} />
+          <Route exact path="/beers/:id" component={Details} />*/}
+          <Route exact path="/randomizer" component={Random} />
+          {/* <Route exact path="/new" component={NewBeer} />  */}
+        </Switch>
+      </div>
+    );
+  }
 }
-
 export default App;
