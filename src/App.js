@@ -4,8 +4,8 @@ import Home from './components/Home'
 import Random from './components/Random'
 import NavBar from './components/NavBar'
 
-//UNSPLASH API for searching images
-//Beer Facts in loading screen
+//***UNSPLASH API for searching images
+//***Beer Facts in loading screen
 
 
 class App extends Component {
