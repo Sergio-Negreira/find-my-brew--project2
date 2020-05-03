@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from './components/Home'
 import Random from './components/Random'
 import NavBar from './components/NavBar'
-import Search from './components/Search'
+// import Search from './components/Search'
 
 //***UNSPLASH API for searching images
 //***Beer Facts in loading screen
@@ -22,7 +22,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/beers" component={Search} />
+          {/* <Route exact path="/beers" component={Search} /> */}
           {/* <Route exact path="/beers/:id" component={Details} />*/} 
           <Route exact path="/randomizer" component={Random} />
           {/* <Route exact path="/new" component={NewBeer} />  */}

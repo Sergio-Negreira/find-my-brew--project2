@@ -10,7 +10,7 @@ class Random extends Component {
   getBeerRandomDetail() {
     axios
       .get(
-        "https://data.opendatasoft.com/api/records/1.0/search/?dataset=open-beer-database%40public-us&rows=7000"
+        "https://data.opendatasoft.com/api/records/1.0/search/?dataset=open-beer-database%40public-us&rows=6000"
       )
       .then((response) => {
         const randomBeer = response.data;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 class Home extends Component {
   componentDidMount() {}
 
@@ -19,10 +18,17 @@ class Home extends Component {
             <img src="/images/new-beer.png" alt=" New Beer" />
             <p>Find a New Beer</p>
           </Link>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col" >One of three columns</div>
+              <div class="col" >One of three columns</div>
+              <div class="col" >One of three columns</div>
+            </div>
+          </div>
         </div>
       </div>
     );
-  } 
+  }
 }
 
 export default Home;
