@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import StyleCards from "./StyleCards"
 
 class Home extends Component {
   componentDidMount() {}
@@ -18,11 +20,23 @@ class Home extends Component {
             <img src="/images/new-beer.png" alt=" New Beer" />
             <p>Find a New Beer</p>
           </Link>
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col" >One of three columns</div>
-              <div class="col" >One of three columns</div>
-              <div class="col" >One of three columns</div>
+          <div className="container">
+            <h2>
+              Pick as many of the following filters to help you choose the
+              perfect brew.
+            </h2>
+            <br />
+            <div className="row">
+              <div className="col-sm">
+                <h3>Beer Styles</h3>
+                <StyleCards/>
+              </div>
+              <div className="col-sm">
+                <h3>Countries</h3>
+              </div>
+              <div className="col-sm">
+                <h3>Categories</h3>(broader range of beers)
+              </div>
             </div>
           </div>
         </div>
