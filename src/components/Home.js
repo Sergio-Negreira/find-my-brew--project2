@@ -8,6 +8,9 @@ import CategoryCards from "./CategoryCards"
 import Search from './Search'
 import { Scrollbars } from 'react-custom-scrollbars';
 import { beerOptions } from "../components/data";
+import { Button } from "react-bootstrap";
+import { Route, Switch } from "react-router-dom";
+import Details from './Details'
 
 
 
@@ -15,6 +18,7 @@ class Home extends Component {
   state = {
     myArray: [],
     searchArray: [],
+    videoURL: "images-videos/bar-nosound.mp4"
   };
 
   addItem = (beerStyle) => {
@@ -35,11 +39,9 @@ class Home extends Component {
     const beerStyles = this.state.myArray.filter(item => item.type === 'beerStyle').map(bs => axios.get(`https://data.opendatasoft.com/api/records/1.0/search/?dataset=open-beer-database%40public-us&rows=5878&refine.style_name=${ bs.value.split(' ').join('+')}&refine.country=${country}`))
 
     Promise.all(beerStyles).then( res => {
-      // console.log(res);
       this.setState({
-        searchArray: res
+        searchArray: res.reduce((a,v) => a.concat(v.data.records), [])
       })
-      console.log(res);
     })
     // User needs to be on a new page with all the beers displayed
 
@@ -74,30 +76,40 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="Home">
+      <div id="Home">
+        {/* <video id="background-video" loop autoPlay><source src={this.state.videoURL} type="video/mp4" /> </video>  */}
         <div style={{paddingLeft:"5em", paddingRight:"5em" ,marginLeft:"auto", marginRight:"auto" }}>
         <Search  onChangeSearch={this.onChangeSearch} myArray={this.state.myArray} />
+        <br/>
+        <Switch>
+        <Route ><Button variant="outline-warning" size="lg" style={{width:"80%", marginLeft:"auto", marginRight:"auto"}} block>Find My Brew</Button>{" "}</Route>
+        </Switch>
         </div>
-        <div>
-          <div>
-            <Link to="/beers">
-              <video src="/images/beers.png" alt=" All Beers" />
-              <p>Browse All Beers</p>
-            </Link>
-          </div>
-          <div>
-            <Link to="/randomizer">
-              <img src="/images/new-beer.png" alt=" New Beer" />
-              <p>Find a New Beer</p>
-            </Link>
-          </div>
-          <div className="container" style={{height:"65vh", textAlign:"center", justifyContent:"center"}}>
+        <div >
+        <br/>
+          
+            <div id="top-container" style={{marginLeft:"auto", marginRight:"auto", WebkitTransform:"scale(.75)"}} >
+              <div id="one">
+                <Link to="/beers">
+                  <img src="/images-videos/beerpour.gif" alt=" All Beers" />
+                  <p>Browse All Beers</p>
+                </Link>
+              </div>
+              <div id="two">
+                <Link to="/randomizer">
+                  <img src="/images-videos/beerpour.gif" alt=" New Beer" />
+                  <p>Find a New Beer</p>
+                </Link>
+              </div>
+            </div>
+          
+          <div className="container" style={{height:"65vh", textAlign:"center", alignSelf:"center"}}>
           <button onClick={this.makeBeerQuery}>CLick me</button>
-          <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200} >
             <h2>
               Pick as many of the following filters to help you choose the
               perfect brew.
             </h2>
+          <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200} >
             <br />
             <div className="row" >
               <div className="col-sm">

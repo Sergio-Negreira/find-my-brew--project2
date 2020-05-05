@@ -37,7 +37,6 @@ export default class StyleCards extends Component {
     return (
       <div>
         {this.displayStyle()}
-        {/* {this.other()} */}
       </div>
     );
   }

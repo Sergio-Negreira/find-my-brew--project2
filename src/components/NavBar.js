@@ -5,9 +5,9 @@ class NavBar extends Component {
   render() {
     return (
       <nav>
-        <div style={{ backgroundColor: "#ffe23c", height: "5vh", backgroundimage:"url(../components/images-videos/hiclipart.com.png)" }}>
+        <div style={{ backgroundColor: "#ffe23c"}}>
           <Link to="/">
-            <img src="images-videos/hiclipart.com.png" alt="home" height="40vh"/>
+            <img src="images-videos/kindpng_319499.png" alt="home" height="40vh" style={{marginLeft: "48.5%"}} />
           </Link>
         </div>
       </nav>

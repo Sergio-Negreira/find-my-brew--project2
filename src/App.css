@@ -1,0 +1,26 @@
+#background-video {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#top-container {
+  display: flex;
+  justify-content:  space-around;
+  text-align: center;
+}
+
+#Home {
+  background-image: url();
+}
+
+/* #background-video { 
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+} */
