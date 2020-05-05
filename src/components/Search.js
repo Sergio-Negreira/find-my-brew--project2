@@ -1,5 +1,3 @@
-// import 'react-select/dist/react-select.css'
-// import 'react-virtualized-select/styles.css'
 import React from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
@@ -13,18 +11,19 @@ class AnimatedMulti extends React.Component {
   render() {
     return (
       <>
-          <Select
+          <Select  
           closeMenuOnSelect={false}
           components={animatedComponents}
           defaultValue={this.props.myArray}
           value={this.props.myArray}
           isMulti
           onChange={this.props.onChangeSearch}
-          // options
-          setValue={(e)=>console.log(e,e)}
+          options={false}
+          setValue={(e)=>console.log(e,e)}   
         />
+        <br/>
         <Switch>
-        <Route><Button variant="outline-warning" size="lg" block>Search</Button>{" "}</Route>
+        <Route><Button variant="outline-warning" size="lg" style={{width:"80%", marginLeft:"auto", marginRight:"auto"}} block>Find My Brew</Button>{" "}</Route>
         </Switch> 
       </>
     );

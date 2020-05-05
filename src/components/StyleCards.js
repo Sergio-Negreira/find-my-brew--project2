@@ -8,7 +8,7 @@ export default class StyleCards extends Component {
   displayStyle = () => {
     return styleArr.map((beerStyle) => {
       return (
-        <Card className="text-center" style={{ width: "15rem" }}>
+        <Card className="text-center" style={{ width: "15rem", marginLeft:"auto", marginRight:"auto"}}>
         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
         <Card.Body>
           <ToggleButtonGroup onChange={this.props.onChangeToggle} type="checkbox" className="mb-2">

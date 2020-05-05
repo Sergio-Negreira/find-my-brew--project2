@@ -1,40 +1,33 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { Card, Button } from "react-bootstrap";
+import { Card, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
 import { categoryArr } from "../components/data"
 
-export default class CountryCards extends Component {
+export default class StyleCards extends Component {
  
-  componentDidMount() {}
-
   displayStyle = () => {
-    return categoryArr.map((categoryName) => {
+    return categoryArr.map((beerStyle) => {
       return (
-        <Card className="text-center" style={{ width: "11rem" }} >
+        <Card className="text-center" style={{ width: "15rem" ,marginLeft:"auto", marginRight:"auto"}}>
         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
         <Card.Body>
-          <Button variant="outline-danger">{categoryName}</Button>
+          <ToggleButtonGroup onChange={this.props.onChangeToggle} type="checkbox" className="mb-2">
+          <ToggleButton onChange={(e) => { 
+              this.props.addItem(beerStyle)
+            }} variant="outline-danger"
+            value={beerStyle}>{beerStyle}</ToggleButton>
+          </ToggleButtonGroup>
         </Card.Body>
       </Card>
        )
      })
-   }
-
-   other = () => {
-    return (
-        <Card className="text-center" style={{ width: "15rem" }}>
-        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-        <Card.Body>
-          <Button variant="outline-danger">Other</Button>
-        </Card.Body>
-      </Card> ) } 
+   }        
 
   render() {
     return (
       <div>
         {this.displayStyle()}
-        {this.other()}
       </div>
     );
-}
+  }
 }

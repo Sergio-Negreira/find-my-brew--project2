@@ -17,10 +17,13 @@ class App extends Component {
         <header>
            <NavBar />
         </header>
-        <div class="title"><h1>Find My Brew</h1></div>
-        <Switch>
+        <div className="title" style={{}}>
+        <h1 style={{textAlign:"center"}}>Find My Brew</h1>
+        
           <Route exact path="/" component={Home} />
+        </div>
           
+        <Switch>
           {/* <Route exact path="/beers/:id" component={Details} />*/} 
           <Route exact path="/randomizer" component={Random} />
           {/* <Route exact path="/new" component={NewBeer} />  */}

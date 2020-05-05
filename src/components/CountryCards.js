@@ -10,10 +10,10 @@ export default class CountryCards extends Component {
   displayStyle = () => {
     return countryArr.map((countryName) => {
       return (
-        <Card className="text-center" style={{ width: "11rem" }} >
+        <Card className="text-center" style={{ width: "11rem", marginLeft:"auto", marginRight:"auto"}} >
         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
         <Card.Body>
-          <Button variant="danger">{countryName}</Button>
+          <Button variant="outline-danger">{countryName}</Button>
         </Card.Body>
       </Card>
        )

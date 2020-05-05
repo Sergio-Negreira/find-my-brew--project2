@@ -1,50 +1,18 @@
-import { Button, Select, Tag } from 'antd';
-import { PoweroffOutlined } from '@ant-design/icons';
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-export default class NavBar extends Component {
-  state = {
-    loadings: [],
-  };
-
-  enterLoading = index => {
-    const newLoadings = [...this.state.loadings];
-    newLoadings[index] = true;
-    this.setState({
-      loadings: newLoadings,
-    });
-    setTimeout(() => {
-      newLoadings[index] = false;
-      this.setState({ loadings: newLoadings });
-    }, 6000);
-  };
-
+class NavBar extends Component {
   render() {
-    const { loadings } = this.state;
     return (
-      <>
-       
-        <Button type="primary" icon={<PoweroffOutlined />} loading />
-        <br />
-        <Button type="primary" loading={loadings[0]} onClick={() => this.enterLoading(0)}>
-          Click me!
-        </Button>
-        <Button
-          type="primary"
-          icon={<PoweroffOutlined />}
-          loading={loadings[1]}
-          onClick={() => this.enterLoading(1)}
-        >
-          Click me!
-        </Button>
-        <Button
-          type="primary"
-          icon={<PoweroffOutlined />}
-          loading={loadings[2]}
-          onClick={() => this.enterLoading(2)}
-        />
-      </>
+      <nav>
+        <div style={{ backgroundColor: "#ffe23c", height: "5vh", backgroundimage:"url(../components/images-videos/hiclipart.com.png)" }}>
+          <Link to="/">
+            <img src="images-videos/hiclipart.com.png" alt="home" height="40vh"/>
+          </Link>
+        </div>
+      </nav>
     );
   }
 }
 
+export default NavBar;
