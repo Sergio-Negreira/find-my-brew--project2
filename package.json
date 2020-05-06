@@ -1,6 +1,5 @@
 {
   "name": "find-my-brew",
-  "homepage": "http://sergio-negreira.github.io/find-my-brew--project2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
