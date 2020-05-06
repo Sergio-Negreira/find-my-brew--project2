@@ -66,7 +66,7 @@ class Random extends Component {
             {beer.website &&<p>Find out more info here: <a href={beer.website} alt='URL not found'>{beer.website}</a></p>}
           </div>
         </div>
-        <div id="anotherOne" style={{textDecoration:"none"}}><Link to="/randomizer"> 
+        <div id="anotherOne" style={{textDecoration:"none"}}><Link to="/randomizer" style={{ textDecoration: 'none' }}> 
         <div className="sign"  >
          <span className="fast-flicker">Want</span>
          &nbsp;Anot
