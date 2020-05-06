@@ -35,9 +35,10 @@ class App extends Component {
         axios.get(
           `https://data.opendatasoft.com/api/records/1.0/search/?dataset=open-beer-database%40public-us&rows=5878&refine.style_name=${bs.value
             .split(" ")
-            .join("+")}&refine.country=${country}`
+            .join("+")}`
         )
-      );
+          //&refine.country=${country}&refine.cat_name=${category}
+        );
 
     Promise.all(beerStyles).then((res) => {
       this.setState({

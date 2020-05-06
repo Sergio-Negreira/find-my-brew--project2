@@ -7,7 +7,6 @@ import CategoryCards from "./CategoryCards";
 import Search from "./Search";
 import { Scrollbars } from "react-custom-scrollbars";
 import { Button } from "react-bootstrap";
-import Details from "./Details";
 
 class Home extends Component {
   
@@ -24,7 +23,7 @@ class Home extends Component {
         
         </div>
       <div id="Home">
-        <video id="background-video" loop autoPlay>
+        <video id="background-video" loop muted autoPlay>
           <source src={this.props.state.videoURL} type="video/mp4" />{" "}
         </video>
         <div

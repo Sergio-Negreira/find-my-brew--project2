@@ -51,22 +51,30 @@ class Random extends Component {
           </div>
           <div id="randomDescription">
             <h3>
-            {beer.descript} <br /><br /><br />
-             {beer.address1 && <p>Produced by {beer.name_breweries} <br /> </p>}
-             {beer.address1 && <p>Style: {beer.style_name} <br /></p>}
-             {beer.address1 && <p>Category: {beer.cat_name}</p>}
+             {beer.descript && <p>{beer.descript}</p>}  <br /><br />
+             {beer.name_breweries && <p>Produced by {beer.name_breweries} <br /> </p>}
+             {beer.style_name && <p>Style: {beer.style_name} <br /></p>}
+             {beer.cat_name && <p>Category: {beer.cat_name}</p>}
             </h3>
             <p></p>
           </div>
           <div id="randomMore">
             {beer.address1 && <p>Address: {beer.address1}</p>}
-            {beer.address1 &&<p>City: {beer.city}</p>}
-            {beer.address1 &&<p>State: {beer.state}</p>}
-            {beer.address1 &&<p>Country: {beer.country}</p>}
-            {beer.address1 &&<p>Find out more info here: <a href={beer.website} alt='URL not found'>{beer.website}</a></p>}
+            {beer.city &&<p>City: {beer.city}</p>}
+            {beer.state &&<p>State: {beer.state}</p>}
+            {beer.country &&<p>Country: {beer.country}</p>}
+            {beer.website &&<p>Find out more info here: <a href={beer.website} alt='URL not found'>{beer.website}</a></p>}
           </div>
         </div>
-        <Link to="/randomizer"><p style={{textAlign:"center", paddingTop:"1em", fontSize:"50px", "letterSpacing": "-1px", lineHeight: "1"}}>Want another?</p></Link>
+        <div id="anotherOne" style={{textDecoration:"none"}}><Link to="/randomizer"> 
+        <div className="sign"  >
+         <span className="fast-flicker">Want</span>
+         &nbsp;Anot
+         <span className="fast-flicker">h</span>
+         <span className="flicker">er&nbsp;</span>
+         One?
+        </div> 
+    </Link></div>
       </div>
     );
   }

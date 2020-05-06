@@ -5,9 +5,9 @@ class BottomBar extends Component {
   render() {
     return (
       <nav>
-        <div style={{ backgroundColor: "black"}}>
+        <div style={{ backgroundColor: "black", height:"5em", alignSelf:"bottom"}}>
           <Link to="/">
-            <img src="images-videos/kindpng_319499.png" alt="home" height="50vh" style={{marginLeft: "48.5%"}} />
+            <p style={{textAlign:"right", color:"white"}}>Did we help you find your brew today? If not, contact us here!</p>
           </Link>
         </div>
       </nav>
