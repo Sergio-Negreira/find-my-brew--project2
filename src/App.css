@@ -30,7 +30,7 @@
  #randomTitle {
   animation-name: learn;
   animation-duration: 5s;
-  background-image: url("./components/2ndbeerpage.gif");
+  background-image: url("/images-videos/2ndbeerpage.gif");
   color: white;
  }
 
