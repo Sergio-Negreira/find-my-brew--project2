@@ -72,7 +72,8 @@ class Random extends Component {
          &nbsp;Anot
          <span className="fast-flicker">h</span>
          <span className="flicker">er&nbsp;</span>
-         One?
+         &nbsp;One
+         <span className="flicker">?</span>
         </div> 
     </Link></div>
       </div>

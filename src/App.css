@@ -88,9 +88,10 @@
 }
 
 @font-face {
-  font-family: Clip;
-  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  font-family: neon;
+  src:url("/images-videos/Potra.ttf")
 }
+
 
 #anotherOne {
   background-color: #141114;
@@ -114,7 +115,7 @@
   letter-spacing: 2;
   left: 50%;
   top: 50%;
-  font-family: "Clip";
+  font-family: "neon";
   text-transform: uppercase;
   font-size: 6em;
   color: #ffffe6;
