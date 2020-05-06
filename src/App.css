@@ -19,7 +19,7 @@
   position: absolute;
   transform: scaley(.75);
   z-index: -1;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 @keyframes learn {
