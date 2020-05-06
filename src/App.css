@@ -31,7 +31,7 @@
  #randomTitle {
   animation-name: learn;
   animation-duration: 5s;
-  /* background-image: url("/images-videos/2ndbeerpage.gif"); */
+  background-image: url("/images-videos/2ndbeerpage.gif");
   background-repeat: no-repeat;
   background-size: cover;
 
