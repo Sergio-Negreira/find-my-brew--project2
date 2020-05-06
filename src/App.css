@@ -1,26 +1,110 @@
-#background-video {
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
 
 #top-container {
   display: flex;
   justify-content:  space-around;
   text-align: center;
+  opacity: 50%;
 }
 
 #Home {
   background-image: url();
 }
 
-/* #background-video { 
+#background-video { 
   min-width: 100%;
   min-height: 100%;
+  right: 0;
+  bottom: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-} */
+  transform: scaley(.75);
+  z-index: -1;
+  opacity: 50%;
+}
+
+@keyframes learn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+ }
+ 
+ /* The div element for the animation */
+ #randomTitle {
+  animation-name: learn;
+  animation-duration: 5s;
+  background-image: url("./components/2ndbeerpage.gif");
+  color: white;
+ }
+
+ #randomMore {
+  animation-name: learn;
+  animation-duration: 8s;
+  max-width: 75%;
+  text-align: left;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ #randomDescription {
+  animation-name: learn;
+  animation-duration: 6s;
+  max-width: 75%;
+  text-align: left;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-image:   linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
+                      linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%),
+                      linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
+                      linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%);
+  background-size:    100% 3px,
+                      3px 100%,
+                      100% 3px,
+                      3px 100%;
+  background-position:    0 0,
+                          100% 0,
+                          100% 100%,
+                          0 100%;
+  animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  animation-play-state: paused;
+ }
+
+
+ @keyframes bg {
+  0% {
+      background-size:    0 3px,
+                          3px 0,
+                          0 3px,
+                          3px 0;
+  }
+  25% {
+      background-size:    100% 3px,
+                          3px 0,
+                          0 3px,
+                          3px 0;
+  }
+  50% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          0 3px,
+                          3px 0;
+  }
+  75% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          100% 3px,
+                          3px 0;
+  }
+  100% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          100% 3px,
+                          3px 100%;
+  }
+}
+
+
+
+#randomDescription {
+  animation-play-state: running;
+}

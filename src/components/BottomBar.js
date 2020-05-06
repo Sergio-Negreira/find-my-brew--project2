@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class NavBar extends Component {
+class BottomBar extends Component {
   render() {
     return (
       <nav>
-        <div style={{ backgroundColor: "#ffe23c"}}>
+        <div style={{ backgroundColor: "black"}}>
           <Link to="/">
             <img src="images-videos/kindpng_319499.png" alt="home" height="50vh" style={{marginLeft: "48.5%"}} />
           </Link>
@@ -15,4 +15,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default BottomBar;

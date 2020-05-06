@@ -16,7 +16,7 @@ class AnimatedMulti extends React.Component {
           value={this.props.myArray}
           isMulti
           onChange={this.props.onChangeSearch}
-          options={false}
+          options={this.props.myArray}
           setValue={(e)=>console.log(e,e)}   
         />
                
