@@ -43,7 +43,7 @@ class Random extends Component {
         <div>{/* <img src={beer.image_url} alt="beer" height="200vh"/> */}</div>
         <div>
           <div id="randomTitle">
-            <h1 style={{textAlign:"center", paddingTop:"1em", fontSize: "175px", fontWeight: "bold", "letterSpacing": "-8px", lineHeight: "1"}}>Here's your beer.</h1>
+            <h1 style={{textAlign:"center", paddingTop:"1.5em", paddingBottom:"1.5em", fontSize: "175px", fontWeight: "bold", "letterSpacing": "-8px", lineHeight: "1"}}>Here's your beer.</h1>
             <br />
             <h1>
               #{beer.id}: {beer.name}
