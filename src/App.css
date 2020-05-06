@@ -31,26 +31,18 @@
  #randomTitle {
   animation-name: learn;
   animation-duration: 5s;
-  background-image: url("/images-videos/2ndbeerpage.gif");
+  /* background-image: url("/images-videos/2ndbeerpage.gif"); */
   background-repeat: no-repeat;
   background-size: cover;
 
   color: white;
  }
 
- #randomMore {
+
+
+ #randomDescription, #randomMore {
   animation-name: learn;
   animation-duration: 8s;
-  max-width: 75%;
-  text-align: left;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
- }
-
- #randomDescription {
-  animation-name: learn;
-  animation-duration: 6s;
   max-width: 75%;
   text-align: left;
   justify-content: center;
@@ -109,6 +101,6 @@
 
 
 
-#randomDescription {
+#randomDescription, #randomMore {
   animation-play-state: running;
 }
